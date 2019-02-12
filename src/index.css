@@ -12,7 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#root {
+
+/* #root {
   background: url("./images/bg1.jpg") no-repeat center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.8);
@@ -20,4 +21,4 @@ code {
   background-attachment: fixed;
   height: 100%;
   width: 100%;
-}
+} */

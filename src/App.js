@@ -2,83 +2,51 @@ import React, { Component } from 'react';
 import Buscador from './components/Buscador';
 import Resultado from './components/Resultado';
 import Navigation from './components/Navigation';
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
+
 class App extends Component {
   
-	state = {
-		termino : '',
-		imagenes : [],
-		pagina: ''
-	}
-	scroll = () => {
-		const elemento = document.querySelector('.jumbotron');
-		elemento.scrollIntoView('smooth', 'start');
-	}
-	paginaAnterior = () => {
-		 //? Leer el state de la pagina actual
-		 let pagina = this.state.pagina;
-		 //? Leer si la pagina es 1, ya no ir hacia atrás
-		 if(pagina === 1) return null;
-		 //? Sumar uno a la pagina actual
-		 pagina--;
-		 //? agregar el cambio al state
-		 this.setState({
-			 pagina
-		 }, () => {
-			 this.consultarApi();
-			 this.scroll();
-		 });
-		}
-
- 	paginaSiguiente = () => {
-		 //? Leer el state de la pagina actual
-		let pagina = this.state.pagina;
-		//? Sumar uno a la pagina actual
-		pagina++;
-		//? agregar el cambio al state
-		this.setState({
-			pagina
-		}, () => {
-			this.consultarApi();
-			this.scroll();
-		});
- 	}
-
-	consultarApi = () => {
-		const termino = this.state.termino;
-		const pagina = this.state.pagina;
-		const url = `https://pixabay.com/api/?key=11562765-c560d524c81146724cd6a0f92&q=${termino}&per_page=30&page=${pagina}`;
-		fetch(url) 
-			.then(respuesta => respuesta.json() )
-			.then(resultado => this.setState({ imagenes : resultado.hits }) )
-	}
-
-	datosBusqueda = (termino) => {
-		this.setState({
-			termino: termino,
-			pagina: 1
-		}, () => {
-			this.consultarApi();
-		})
-	}
-
 	render() {
+		const styles = {
+			fontFamily: 'Menlo-Regular, Menlo, monospace',
+			fontSize: 14,
+			lineHeight: '10px',
+			color: 'white',
+			display: 'flex', alignItems: 'center', justifyContent: 'center'
+}
     return (
-      <div className="App container">
-			<Navigation/>
-				<div className="jumbotron">
-					<p className="lead text-center">Buscador de Imágenes</p>
+      <div className="App">
+            <Parallax horizontal ref="parallax" pages={3}>
 
-					<Buscador 
-						datosBusqueda={this.datosBusqueda}
-					/>
-				</div>
-				<div className="row justify-content-center">
-					<Resultado 
-							imagenes={this.state.imagenes}
-							paginaAnterior={this.paginaAnterior}
-							paginaSiguiente={this.paginaSiguiente}
-					/>
-				</div>
+<Parallax.Layer offset={0} speed={1} style={{ background-image: url("./images/bg1.jpg") }} />
+<Parallax.Layer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
+<Parallax.Layer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+
+<Parallax.Layer
+		offset={0}
+		speed={0.5}
+		style={styles}
+		onClick={() => this.refs.parallax.scrollTo(1)}>
+		Click!
+</Parallax.Layer>
+
+<Parallax.Layer
+		offset={1}
+		speed={-0.1}
+		style={styles}
+		onClick={() => this.refs.parallax.scrollTo(2)}>
+		Another page ...
+</Parallax.Layer>
+
+<Parallax.Layer
+		offset={2}
+		speed={0.5}
+		style={styles}
+		onClick={() => this.refs.parallax.scrollTo(0)}>
+		The end.
+</Parallax.Layer>
+
+</Parallax>
       </div>
     );
   }
