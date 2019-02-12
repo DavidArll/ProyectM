@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Buscador from './components/Buscador';
 import Resultado from './components/Resultado';
+import Navigation from './components/Navigation';
 class App extends Component {
   
 	state = {
@@ -63,6 +64,7 @@ class App extends Component {
 	render() {
     return (
       <div className="App container">
+			<Navigation/>
 				<div className="jumbotron">
 					<p className="lead text-center">Buscador de Imágenes</p>
 
