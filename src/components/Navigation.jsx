@@ -1,29 +1,71 @@
 import React, { Component } from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 class Navigation extends Component {
-    state = {  }
+      scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
     render() { 
         return ( 
             <React.Fragment>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Dorzav</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div className="container">
+      <a className="navbar-brand js-scroll-trigger" href="#page-top"
+      onClick={this.scrollToTop}
+      >Dorzav</a>
+      <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Sobre nosotros</a>
+      <div className="collapse navbar-collapse" id="navbarResponsive">
+        <ul className="navbar-nav ml-auto my-2 my-lg-0">
+          <li className="nav-item nav-link">
+            <Link
+                activeClass="nav-link"
+                to="about"
+                spy={true}
+                smooth={true} 
+                offset={-70}
+                duration={500}
+              >
+                Sobre nosotros
+              </Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Eventos</a>
+          <li className="nav-item nav-link">
+            <Link
+                activeClass="nav-link"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Eventos
+              </Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <li className="nav-item nav-link">
+          <Link
+                activeClass="nav-link"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Portafolio
+              </Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
+          <li className="nav-item nav-link">
+          <Link
+                activeClass="nav-link"
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contacto
+              </Link>
           </li>
         </ul>
       </div>
