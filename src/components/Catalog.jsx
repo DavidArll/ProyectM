@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-class Services extends Component {
+class Catalog extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <section className="page-section" id="events">
+                <section className="page-section" id="catalog">
                     <div className="container">
                     <h2 className="text-center mt-0">At Your Service</h2>
                     <hr className="divider my-4"/>
@@ -45,4 +45,4 @@ class Services extends Component {
     }
 }
  
-export default Services;
+export default Catalog;
