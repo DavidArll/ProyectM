@@ -7550,7 +7550,7 @@ button.bg-dark:focus {
   -ms-flex-item-align: end !important;
   align-self: flex-end !important;
   background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 250px 0 0 0;
+  border-radius: 250px 15px 0 0;
 }
 
 .align-self-center {
