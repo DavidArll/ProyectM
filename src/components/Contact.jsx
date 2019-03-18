@@ -13,7 +13,7 @@ class Contact extends Component {
                             <h2 className="text-white mt-0">Tenemos lo que necesitas!</h2>
                             <hr className="divider light my-4" />
                             <p className="text-white-50 mb-4">Somos fabricantes a la medida, con los mejores materiales
-                            y la mejor calidad, si necesitas saber mas contactanos, estamos en redes sociales!</p>
+                            y la mejor calidad, si necesitas saber mas contáctanos, estamos en redes sociales!</p>
                             </div>
                         </Col>
                         <Col className="contact-buttons">
