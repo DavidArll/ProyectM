@@ -10602,9 +10602,11 @@ hr.light {
 }
 
 .page-section {
+  height: 90vh;
   padding-top: 10rem;
-  padding-bottom: calc(10rem + 55px);
-  overflow: hidden;
+  /*
+  padding-bottom: calc(10rem + 55px);*/
+  overflow: hidden; 
 }
 
 #mainNav {

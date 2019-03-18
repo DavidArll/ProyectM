@@ -14,3 +14,28 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+
+.bg-catalog {
+  height: 90vh;
+  padding: 0px;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider {
+  height: 90vh;
+}
+.carousel .slider-wrapper.axis-horizontal .slider .slide img {
+  height: 90vh;
+}
+
+.contact-page {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2))), url("../images/m5.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/m5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.contact-buttons {
+  border-left: 4px solid rgba(255, 255, 255, 0.698);
+}
