@@ -19,7 +19,7 @@ class Resultado extends Component {
                 </div>
                 <Paginacion 
                     paginaAnterior={this.props.paginaAnterior}
-                    paginaSiguiente={this.props.paginaSiguiente}
+                    paginaSfort y Caiguiente={this.props.paginaSiguiente}
                 />
             </React.Fragment>
         )
