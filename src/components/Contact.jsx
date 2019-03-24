@@ -8,7 +8,7 @@ class Contact extends Component {
             <section className="page-section contact-page" id="contact">
                 <Container>
                     <Row className="justify-content-center">
-                        <Col>
+                        <Col className="justify-content-center">
                         <div className="col-lg-8">
                             <h2 className="text-white mt-0">Tenemos lo que necesitas!</h2>
                             <hr className="divider light my-4" />
@@ -17,11 +17,14 @@ class Contact extends Component {
                             </div>
                         </Col>
                         <Col className="contact-buttons">
-                            <Row> 
-                                <Col xs md="auto" lg="2">
+                            <Row className="justify-content-center">
+                                <Col xs lg="12">
+                                <h2 className="text-white mt-0">Contactanos!</h2>
+                                </Col>
+                                <Col lg="4">
                                     <Button href="#" variant="info">Facebook</Button>
                                 </Col>
-                                <Col xs md="auto" lg="2">
+                                <Col lg="4">
                                     <Button href="https://api.whatsapp.com/send?phone=5218118008717" target="_blank" variant="success">WhatsApp</Button>
                                 </Col>
                             </Row>

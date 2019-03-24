@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
-import About from './components/About';
 import Contact from './components/Contact';
 import Catalog from './components/Catalog';
 import './components/css/creative.css';
@@ -14,7 +13,6 @@ class App extends Component {
       <div id="page-top"className="App">
         <Navigation/>
         <Header/>
-        <About/>
         <Catalog/>
         <Contact/>
       </div>

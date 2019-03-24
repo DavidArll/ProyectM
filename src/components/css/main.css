@@ -39,3 +39,29 @@
 .contact-buttons {
   border-left: 4px solid rgba(255, 255, 255, 0.698);
 }
+
+.justify-content-center.col {
+  text-align: center;
+  left: 80px;
+}
+
+hr.divider {
+  max-width: 12.25rem;
+  border-width: 0.2rem;
+}
+
+h2.text-white.mt-0 {
+  margin-bottom: 25px;
+}
+
+.contact-buttons.col {
+  text-align: center;
+}
+
+li.nav-item > .active {
+  color: orangered;
+}
+
+li.nav-item {
+  margin-left: 15px;
+}
